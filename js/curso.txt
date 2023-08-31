@@ -1,0 +1,8 @@
+window.alert("txt")
+Aparece uma mensagem
+
+window.confirm("txt")
+Aparece um texto com uma opição de confirmar ou cancelar
+
+window.prompt("txt")
+Serve igual o input, mas exibe uma caixa de texto igual ao alert
