@@ -11,6 +11,7 @@ body {
 }
 
 .night {
+  grid-area: Stars;
   display: flex;
   transform: rotateZ(40deg);
   opacity: .9;
@@ -49,7 +50,7 @@ body {
   transform: translateX(50%) rotateZ(45deg);
   -webkit-animation: shining 3000ms ease-in-out infinite;
           animation: shining 3000ms ease-in-out infinite;
-  transform: translateX(50%) rotateZ(-45deg);
+          transform: translateX(50%) rotateZ(-45deg);
 }
 .shooting_star:nth-child(1) {
   top: calc(50% - 52px);
@@ -348,10 +349,6 @@ div.container{
 p{
     color: #F0B67F;
     font-family: 'Ubuntu', sans-serif;
-}
-
-.night{
-  grid-area: Stars;
 }
 
 hr{

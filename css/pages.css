@@ -1,3 +1,7 @@
+*{
+  scroll-behavior: smooth;
+}
+
 body {
     background: linear-gradient(37deg, #1b2735, #090a0f);
     background-size: 400% 400%;
@@ -7,6 +11,7 @@ body {
   }
   
   .night {
+    grid-area: Stars;
     display: flex;
     transform: rotateZ(40deg);
     opacity: .8;
@@ -46,7 +51,7 @@ body {
     transform: translateX(50%) rotateZ(45deg);
     -webkit-animation: shining 3000ms ease-in-out infinite;
             animation: shining 3000ms ease-in-out infinite;
-    transform: translateX(50%) rotateZ(-45deg);
+            transform: translateX(50%) rotateZ(-45deg);
   }
   .shooting_star:nth-child(1) {
     top: calc(50% - 52px);
@@ -361,10 +366,6 @@ hr{
 
 header{
     grid-area: Header;
-}
-
-.night{
-    grid-area: Stars;
 }
 
 p.Overall-Title{
