@@ -10,7 +10,7 @@ body {
 .night {
   display: flex;
   transform: rotateZ(40deg);
-  opacity: .4;
+  opacity: .9;
   z-index: -1;
 }
 
