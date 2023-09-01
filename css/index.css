@@ -377,15 +377,18 @@ header{
 
 p.Overall-Title{
     font-size: 5rem;
-    text-align: center;
+    letter-spacing: 0.2rem;
 
+    text-align: center;
     text-decoration: underline;
 }
 
 p.Subtitle{
     text-align: center;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
 
-    margin-top: -4rem;
+    margin-top: -2.2rem;
     margin-bottom: 6%;
 }
 
@@ -458,6 +461,7 @@ section.tipes:hover{
 
 }
 
+
 hr.Horizontal-Line-Two{
     margin-top: 5%;
     grid-area: Horizontal-Line-Two;
@@ -473,6 +477,7 @@ hr.Horizontal-Line-Two{
     transition: 0.7s;
     transform: scale(1.02, 1.02);
     transform: translateX(0.5rem);
+    letter-spacing: 1px;
 }
 
 footer{
@@ -494,7 +499,7 @@ div.footerDiv{
 }
 
 p.pages{
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 button.footerButton{
@@ -503,26 +508,28 @@ button.footerButton{
     background-color: inherit;
     border-width: 0px;
 
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 button.footerButton:hover{
     transition: 0.7s;
     transform: scale(1.02, 1.02);
     transform: translateX(0.5rem);
+    letter-spacing: 0.1px;
 }
 
-@media screen and (min-width: 500px) and (max-width: 900px) {
+@media screen and (min-width: 500px) and (max-width: 960px) {
     section.tipes{
         width: auto;
     }
 
     .night{
-      width: 85%;
+      width: 70%;
     }
+
 }
 
-@media screen and (min-width: 0px) and (max-width:499px) {
+@media screen and (min-width: 390px) and (max-width:499px) {
     .Content-One{
         flex-direction: column;
     }
@@ -540,9 +547,48 @@ button.footerButton:hover{
     }
 
     .night{
-        width: 10%;
+        width: 7%;
         position: absolute;
-        left: 5%;
-        top: 5%;
+        left: 2%;
+        top: 2%;
+      }
+      .Overall-Title{
+        font-size: 1rem;
       }
 }
+
+@media screen and (min-width: 0px) and (max-width:369px) {
+  .Content-One{
+      flex-direction: column;
+  }
+  .Content-Two{
+      flex-direction: column;
+  }
+  section.tipes{
+      width: auto;
+  }
+  p.pages{
+      font-size: 1rem ;
+  }
+  button.footerButton{
+      font-size: 0.8rem;
+  }
+
+  .night{
+      width: 3%;
+      position: absolute;
+      left: 1%;
+      top: 1%;
+    }
+    .Overall-Title{
+      font-size: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
