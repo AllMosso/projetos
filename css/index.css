@@ -19,7 +19,7 @@ body {
 }
 
 .shooting_star {
-  position: fixed;
+  position: relative;
   left: 50%;
   top: 50%;
   height: 2px;
