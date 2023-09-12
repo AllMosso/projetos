@@ -12,5 +12,5 @@ if (currentTheme === "light") {
 else {
     targetTheme = "light";
 }
-document.documentElement.setAttribute("data-theme", targetTheme);
+document.body.setAttribute("data-theme", targetTheme);
 });
