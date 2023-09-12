@@ -394,8 +394,6 @@ button{
 section.theme{
   grid-area: Theme;
   background: inherit;
-  display: flex;
-  justify-content: end;
 }
 
 #theme-toggler{
