@@ -1,14 +1,48 @@
 *{
     scroll-behavior: smooth;
+    transition: 0.2s;
+}
+
+html [data-theme='dark'] {
+    --background: #243242, #171925;
+    --star: #5f91ff, rgba(0, 0, 255, 0);
+    --button: #F0B67F, #f3c499;
+    --button-color: #243242;
+    --color: #F0B67F;
+}
+
+html [data-theme='light'] {
+    --background: #ae2012, #bb3e03;
+    --star: #5f91ff, rgba(0, 0, 255, 0);
+    --button: #F0B67F, #c79a6f;
+    --button-color: #fff;
+    --color: #94d2bd;
 }
 
 body {
-  background: linear-gradient(-37deg, #1b2735, #171925);
+  background: linear-gradient(-37deg, var(--background));
   background-size: 400% 400%;
   animation: gradient 10s ease infinite;
   display: flex;
   align-items: center;
 }
+
+div.container{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto auto auto auto;
+    grid-template-areas: 
+                         "Theme"
+                         "Title"
+                         "Horizontal-Line"
+                         "Stars"
+                         "Content-One"
+                         "Content-Two"
+                         "Horizontal-Line-Two"
+                         "Footer";
+}
+
+
 
 .night {
   grid-area: Stars;
@@ -23,7 +57,7 @@ body {
   left: 50%;
   top: 50%;
   height: 2px;
-  background: linear-gradient(-45deg, #5f91ff, rgba(0, 0, 255, 0));
+  background: linear-gradient(-45deg, var(--star));
   border-radius: 999px;
   filter: drop-shadow(0 0 6px #699bff);
   -webkit-animation: tail 3000ms ease-in-out infinite, shooting 3000ms ease-in-out infinite;
@@ -330,26 +364,13 @@ body {
     transform: rotate(405deg);
   }
 }
-  
-  
-div.container{
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto auto auto auto auto;
-    grid-template-areas: 
-                         "Title"
-                         "Horizontal-Line"
-                         "Stars"
-                         "Content-One"
-                         "Content-Two"
-                         "Horizontal-Line-Two"
-                         "Footer";
-}
 
 p{
-    color: #F0B67F;
+    color: var(--color);
     font-family: 'Ubuntu', sans-serif;
 }
+
+
 
 hr{
     display: flex;
@@ -357,17 +378,38 @@ hr{
 
     width: 85%;
     
-    border: 2px solid #F0B67F;
+    border: 2px solid var(--color);
     border-radius: 5px;
 }
 
 button{
-    color: #F0B67F;
+    color: var(--color);
     font-family: 'Ubuntu', sans-serif;
 
     background-color: inherit;
 
     border: 0px;
+}
+
+section.theme{
+  grid-area: Theme;
+  background: inherit;
+  display: flex;
+  justify-content: end;
+}
+
+#theme-toggler{
+  background: linear-gradient(-37deg, var(--button));
+  border-style: solid 1px var(--button);
+  border-radius: 30%;
+
+  color: var(--button-color);
+  font-size: 1rem;
+
+  width: 5%;
+
+  margin: 1rem 1rem -2rem auto;
+  padding: 0.2rem 0.5rem;
 }
 
 header{
@@ -436,7 +478,7 @@ section.tipes{
     box-shadow: 3px 3px 3px black;
     flex-wrap: wrap;
 
-    background: linear-gradient(-37deg, #1b2735, #171925);
+    background: linear-gradient(37deg, var(--background));
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
 
@@ -457,7 +499,7 @@ section.tipes{
 section.tipes:hover{
     transition: 0.7s;
 
-    box-shadow: 6px 6px 7px black;
+    box-shadow: 6px 6px 7px #000000;
 
 }
 
@@ -521,6 +563,11 @@ button.footerButton:hover{
 @media screen and (min-width: 500px) and (max-width: 960px) {
     section.tipes{
         width: auto;
+        margin-top: 4rem;
+    }
+
+    #last{
+      margin-bottom: 3rem;
     }
 
     .night{
@@ -530,7 +577,11 @@ button.footerButton:hover{
 }
 
 @media screen and (min-width: 390px) and (max-width:499px) {
-    .Content-One{
+  .Subtitle{
+    letter-spacing: 0.5px;
+  }  
+  
+  .Content-One{
         flex-direction: column;
     }
     .Content-Two{
@@ -538,7 +589,13 @@ button.footerButton:hover{
     }
     section.tipes{
         width: auto;
+        margin-top: 3rem;
     }
+
+    #last{
+      margin-bottom: 3rem;
+    }
+
     p.pages{
         font-size: 1rem ;
     }
@@ -558,6 +615,9 @@ button.footerButton:hover{
 }
 
 @media screen and (min-width: 0px) and (max-width:369px) {
+  .Subtitle{
+    letter-spacing: 0.2px;
+  }  
   .Content-One{
       flex-direction: column;
   }
@@ -566,7 +626,13 @@ button.footerButton:hover{
   }
   section.tipes{
       width: auto;
+      margin-top: 3rem;
   }
+
+  #last{
+    margin-bottom: 3rem;
+  }
+  
   p.pages{
       font-size: 1rem ;
   }
@@ -584,11 +650,3 @@ button.footerButton:hover{
       font-size: 1rem;
     }
 }
-
-
-
-
-
-
-
-
