@@ -11,7 +11,7 @@ html [data-theme='dark'] {
     --color: #F0B67F;
 }
 
-html [data-theme='light'] {
+html [data-theme="light"] {
     --background: #ae2012, #bb3e03;
     --star: #5f91ff, rgba(0, 0, 255, 0);
     --button: #F0B67F, #c79a6f;
