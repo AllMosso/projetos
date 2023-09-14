@@ -3,20 +3,21 @@
     transition: 0.2s;
 }
 
-html [data-theme='dark'] {
+html [data-theme="dark"] {
     --background: #243242, #171925;
     --star: #5f91ff, rgba(0, 0, 255, 0);
     --button: #F0B67F, #f3c499;
     --button-color: #243242;
     --color: #F0B67F;
+    --detais: #ffffff; 
 }
 
 html [data-theme="light"] {
-    --background: #ae2012, #bb3e03;
+    --background: #283618, #606c38;
     --star: #5f91ff, rgba(0, 0, 255, 0);
     --button: #F0B67F, #c79a6f;
     --button-color: #fff;
-    --color: #94d2bd;
+    --color: #fefae0;
 }
 
 body {
@@ -82,9 +83,9 @@ div.container{
   height: 2px;
   background: linear-gradient(-45deg, rgba(0, 0, 255, 0), #5f91ff, rgba(0, 0, 255, 0));
   transform: translateX(50%) rotateZ(45deg);
+  transform: translateX(50%) rotateZ(-45deg);
   -webkit-animation: shining 3000ms ease-in-out infinite;
           animation: shining 3000ms ease-in-out infinite;
-          transform: translateX(50%) rotateZ(-45deg);
 }
 .shooting_star:nth-child(1) {
   top: calc(50% - 52px);
@@ -393,7 +394,6 @@ button{
 
 section.theme{
   grid-area: Theme;
-  background: inherit;
 }
 
 #theme-toggler{
@@ -403,11 +403,6 @@ section.theme{
 
   color: var(--button-color);
   font-size: 1rem;
-
-  width: 5%;
-
-  margin: 1rem 1rem -2rem auto;
-  padding: 0.2rem 0.5rem;
 }
 
 header{

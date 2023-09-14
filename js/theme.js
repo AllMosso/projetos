@@ -1,14 +1,17 @@
 let themeToggler = document.getElementById("theme-toggler");
+let currentTheme = "dark";
                 
 themeToggler.addEventListener("click", () => {
 let targetTheme;
-let currentTheme = document.documentElement.getAttribute("data-theme")
   
-if (currentTheme === "light") {
+if (currentTheme == "light") {
     targetTheme = "dark";
+    currentTheme = "dark";
 }
 else {
     targetTheme = "light";
+    currentTheme = "light";
 }
 document.body.setAttribute("data-theme", targetTheme);
+
 });
